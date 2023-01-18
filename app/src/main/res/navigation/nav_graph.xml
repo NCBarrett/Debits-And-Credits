@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.neillbarrett.debitsandcredits.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_manageTransactionsFragment"
+            app:destination="@id/manageTransactionsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_manageRecipients"
+            app:destination="@id/manageRecipients" />
+    </fragment>
+    <fragment
+        android:id="@+id/manageTransactionsFragment"
+        android:name="com.neillbarrett.debitsandcredits.ManageTransactions.ManageTransactionsFragment"
+        android:label="fragment_manage_transactions"
+        tools:layout="@layout/fragment_manage_transactions" >
+        <action
+            android:id="@+id/action_manageTransactionsFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/manageRecipients"
+        android:name="com.neillbarrett.debitsandcredits.ManageRecipients.ManageRecipients"
+        android:label="ManageRecipients" >
+        <action
+            android:id="@+id/action_manageRecipients_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+</navigation>
