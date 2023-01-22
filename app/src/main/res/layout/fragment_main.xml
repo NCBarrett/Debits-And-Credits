@@ -4,6 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainFragment"
+    tools:context=".MainFragment">
 
-    />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/navToTransactions"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:text="Go to Transactions"
+        android:layout_constraintTop_toBottomOf="parent"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Go to Recipients"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_constraintTop_toBottomOf="@+id/navToTransactions"
+
+        />
+
+
+</FrameLayout>
