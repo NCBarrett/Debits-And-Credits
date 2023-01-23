@@ -2,4 +2,6 @@
     <string name="app_name">Debits and Credits</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="go_to_transactions">Transactions</string>
+    <string name="go_to_recipients">Recipients</string>
 </resources>
