@@ -8,8 +8,12 @@
 
     <!-- TODO: Update blank fragment layout -->
     <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/manageRecipients"
+        android:name="com.neillbarrett.debitsandcredits.ManageRecipients.ManageRecipients"
+        android:label="@{string/app_name + ` - ` + string/go_to_Recipients}"
         android:layout_height="0dp"
         android:layout_width="0dp"
-        tools:layout="@layout/fragment_manage_recipients"/>
+        tools:layout="@layout/fragment_manage_recipients"
+        />
 
 </FrameLayout>

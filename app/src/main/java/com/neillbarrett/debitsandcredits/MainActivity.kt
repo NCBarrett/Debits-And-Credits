@@ -8,14 +8,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        setupUI()
+        //setupUI()
     }
 
-    private fun setupUI() {
+/*    private fun setupUI() {
         supportFragmentManager
                 //add/perform an action with fragment in response to user interaction
             .beginTransaction()
             .add(R.id.mainFragment, MainFragment())
             .commitNow()
-    }
+    }*/
+
+
 }
