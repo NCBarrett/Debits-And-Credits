@@ -3,4 +3,6 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="go_to_transactions">Transactions</string>
     <string name="go_to_recipients">Recipients</string>
+    <string name="list_of_recipients">List of Recipients</string>
+    <string name="add_recipient">Add Recipient</string>
 </resources>

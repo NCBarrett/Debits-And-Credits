@@ -1,19 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<layout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" >
 
-    <!-- TODO: Update blank fragment layout -->
-    <androidx.fragment.app.FragmentContainerView
+    <data>
+        <variable
+            name="recipientsFragment"
+            type="com.neillbarrett.debitsandcredits.ManageRecipients.RecipientsViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/manageRecipients"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:name="com.neillbarrett.debitsandcredits.ManageRecipients.ManageRecipients"
-        android:label="@{string/app_name + ` - ` + string/go_to_Recipients}"
-        android:layout_height="0dp"
-        android:layout_width="0dp"
-        tools:layout="@layout/fragment_manage_recipients"
-        />
+        tools:layout="@layout/fragment_manage_recipients" >
 
-</FrameLayout>
+        <LinearLayout
+            android:id="@+id/linLay_Users"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/list_of_recipients"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/userListRecyclerView"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/add_button"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            android:text="@string/add_recipient"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linLay_Users" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
