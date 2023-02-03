@@ -39,15 +39,68 @@
                 android:layout_width="match_parent" />
         </LinearLayout>
 
-        <Button
-            android:id="@+id/add_button"
+        <LinearLayout
+            android:id="@+id/linLay_AddUser"
             android:layout_width="wrap_content"
-            android:layout_height="50dp"
+            android:layout_height="100dp"
             android:layout_marginTop="50dp"
-            android:text="@string/add_recipient"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/linLay_Users"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/linLay_Users" />
+            >
+
+            <Button
+                android:id="@+id/add_button"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="@string/add_recipient"
+                android:layout_gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linLay_AddUser"
+/>
+
+            <EditText
+                android:id="@+id/et_NewUser"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:autofillHints="Type name here"
+                android:inputType="textNoSuggestions" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linLay_ChangeUser"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            app:layout_constraintTop_toBottomOf="@id/linLay_AddUser"
+            android:layout_margin="50dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            >
+
+            <Button
+                android:id="@+id/ChangeRecipient_button"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="@string/change_recipient"
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linLay_ChangeUser"
+                />
+
+            <EditText
+                android:id="@+id/et_ChangeRecipient"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:autofillHints="Select name first"
+                android:inputType="textNoSuggestions"
+                />
+
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
